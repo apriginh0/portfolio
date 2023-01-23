@@ -1,0 +1,289 @@
+:root {
+   --main-white: #f0f0f0;
+   --main-red: #be3144;
+   --main-blue: #45567d;
+   --main-gray: #303841;
+}
+*, *::before, *::after {
+   box-sizing: inherit;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+body {
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.8rem;
+   font-weight: 400;
+   line-height: 1.4;
+   color: var(--main-white);
+}
+footer {
+   font-weight: 300;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 2rem;
+   background: var(--main-gray);
+   border-top: 4px solid var(--main-red);
+}
+img {
+   display: block;
+   width: 100%;
+}
+ul {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   color: var(--main-white);
+}
+h1 {
+   font-size: 6rem;
+}
+h2 {
+   font-size: 4.2rem;
+}
+h1, h2 {
+   font-family: 'Raleway', sans-serif;
+   font-weight: 700;
+   text-align: center;
+}
+.nav {
+   display: flex;
+   justify-content: flex-end;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background: var(--main-red);
+   box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
+   z-index: 10;
+   border-radius: 0 0 70px 70px;
+}
+.nav-list {
+   display: flex;
+   margin-right: 4rem;
+}
+.nav-list a {
+   display: block;
+   font-size: 2.2rem;
+   padding: 1.5rem;
+}
+.welcome-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   height: 100vh;
+   background-color: #000;
+   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.welcome-section > h1 {
+   margin-top: 12rem;
+}
+.welcome-section > p {
+   font-size: 3rem;
+   font-weight: 200;
+   font-style: italic;
+   color: var(--main-red);
+}
+.description{
+   background: #000;
+  padding-top: 10px;
+  padding-left: 3px;
+  width: 50vw;
+  height: 45vh;
+  margin-top: 3rem;
+}
+.description h4{
+   color: rgba(0, 255, 0, 0.616);
+  font-family: "Courier";
+  font-size: 20px;
+}
+.azul{
+   color: blue;
+ }
+
+ .description > p{
+   color: lime;
+   font-family: "Courier";
+   font-size: 20px;
+   margin: 10px 0 0 10px;
+   white-space: nowrap;
+   overflow: hidden;
+   width: 30em;
+   animation: type 4s steps(60, end);
+ }
+
+ p:nth-child(3){
+   animation: type2 8s steps(60, end);
+ }
+ p:nth-child(4){
+   animation: type2 16s steps(60, end);
+ }
+
+ .span{
+   animation: blink 1s infinite;
+ }
+
+ @keyframes type{
+   from { width: 0; }
+ }
+
+ @keyframes type2{
+   0%{width: 0;}
+   50%{width: 0;}
+   100%{ width: 100; }
+ }
+
+ @keyframes blink{
+   to{opacity: .0;}
+ }
+
+
+
+
+.projects-section {
+   text-align: center;
+   padding: 10rem 2rem;
+   background: var(--main-blue);
+}
+.projects-section-header {
+   max-width: 712px;
+   margin: 0 auto 6rem auto;
+   border-bottom: 0.2rem solid var(--main-white);
+   text-shadow: #000 0.2rem 0.3rem;
+   box-shadow: #000 0rem 0.1rem;
+}
+.projects-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   grid-gap: 4rem;
+   width: 100%;
+   max-width: 1280px;
+   margin: 0 auto;
+   margin-bottom: 6rem;
+}
+.project {
+   background: var(--main-gray);
+   box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+   border-radius: 2px;
+}
+.project-image {
+   height: calc(100% - 6.8rem);
+   width: 100%;
+   object-fit: cover;
+}
+.project-title {
+   font-size: 2rem;
+   padding: 2rem 0.5rem;
+}
+a .code {
+   color: var(--main-gray);
+   transition: color 0.3s ease-out;
+}
+a:hover .code{
+   color: orange;
+}
+
+.btn {
+   display: inline-block;
+   padding: 1rem 2rem;
+   border-radius: 2px;
+}
+.btn-show-all {
+   font-size: 2rem;
+   background: var(--main-gray);
+   transition: background 0.3s ease-out;
+}
+
+/* <i></i> */
+
+.btn-show-all > i {
+   margin-left: 10px;
+   transform: translateX(0);
+   transition: transform 0.3s ease-out;
+}
+.btn-show-all:hover{
+   background: var(--main-red);
+}
+.btn-show-all:hover > i{
+   transform: translateX(2px);
+}
+.fa-chevron-right:before {
+   content: "\f054";
+}
+.fa, .fas {
+   font-weight: 900;
+}
+.fab {
+   font-family: "Font Awesome 5 Brands";
+}
+.fa, .far, .fas {
+   font-family: "Font Awesome 5 Free";
+}
+.fa, .fab, .fal, .far, .fas {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   line-height: 1;
+}
+.contact-section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: 100%;
+   height: 80vh;
+   padding: 0 2rem;
+   background: var(--main-gray);
+}
+.contact-section-header > h2 {
+   font-size: 6rem;
+}
+.contact-section-header > p {
+   font-style: italic;
+}
+.contact-links {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   max-width: 980px;
+   margin-top: 4rem;
+   flex-wrap: wrap;
+}
+.contact-details {
+   font-size: 2.4rem;
+   text-shadow: 2px 2px 1px #1f1f1f;
+   transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+   transform: translateY(8px);
+}
+footer > p {
+   margin: 2rem;
+}
+
+@media only screen and (max-width: 1140px) {
+   div.description{
+      display: none;
+   }
+   .welcome-section {
+      justify-content: center;
+   }
+   .welcome-section > h1 {
+      margin-top: 0rem;
+   }
+   footer{
+      display: block;
+   }
+}
